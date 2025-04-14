@@ -1,8 +1,5 @@
 package chatapp;
 
-// Some validation logic and structure were supported by ChatGPT to help understand best practices.
-// Used responsibly on 11 April 2025 as allowed in PoE instructions.
-
 public class Registration {
     private String firstName;
     private String lastName;
@@ -30,10 +27,8 @@ public class Registration {
     }
 
     public boolean checkCellPhoneNumber() {
-    // South African format: +27 followed by 9 digits
-    return cellPhone.matches("^\\+27[0-9]{9}$");
-}
-
+        return cellPhone.matches("^\\+27[0-9]{9}$");
+    }
 
     public String registerUser() {
         if (!checkUserName()) {
@@ -52,5 +47,4 @@ public class Registration {
     public String getLastName() { return lastName; }
     public String getUsername() { return username; }
     public String getPassword() { return password; }
-    public String getCellPhone() { return cellPhone; }
 }
