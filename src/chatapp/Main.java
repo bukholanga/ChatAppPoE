@@ -15,7 +15,9 @@ public class Main {
 
             Login validLogin = new Login(validReg.getUsername(), validReg.getPassword(), validReg.getFirstName(), validReg.getLastName());
             validLogin.loginUser("kyl_1", "Ch&&sec@ke99!");
-            System.out.println(validLogin.returnLoginStatus());
+            System.out.println(validReg.registerUser());
+            System.out.println("Registration successful! Welcome, " + validReg.getFirstName() + " " + validReg.getLastName() + ".");
+
         }
 
         System.out.println("\n=== TEST 2: Invalid Login (Wrong Password) ===");
