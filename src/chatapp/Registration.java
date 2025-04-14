@@ -30,8 +30,10 @@ public class Registration {
     }
 
     public boolean checkCellPhoneNumber() {
-        return cellPhone.matches("^\\+[0-9]{1,9}$");
-    }
+    // South African format: +27 followed by 9 digits
+    return cellPhone.matches("^\\+27[0-9]{9}$");
+}
+
 
     public String registerUser() {
         if (!checkUserName()) {
